@@ -1,36 +1,96 @@
+
 const freelancers = [
-    { name: "Dr. Jaramillo", price: 25, occupation: "programmer" },
-    { name: "Dr. Sugarbun", price: 51, occupation: "programmer" },
-    { name: "Prof. Glitter", price: 43, occupation: "teacher" },
-    { name: "Prof. Bigback", price: 81, occupation: "teacher" },
-    { name: "Dr. Readabook", price: 43, occupation: "teacher" },
-    { name: "Prof. Bubble", price: 76, occupation: "programmer" },
-    { name: "Dr. Fire", price: 47, occupation: "teacher" },
-    { name: "Prof. Clone", price: 72, occupation: "driver" },
+    { name: "Oscar", Occupation: "Programmer", age: "28" },
+    { name: "Laura", Occupation: "Driver", age: "35" },
+    { name: "Daniella", Occupation: "Programmer", age: "45" },
   ];
   
-  function init(){
- /** */
- const list = document.querySelector("#list");
- console.log(list);
-
- const freelancers = document.createElemnt('h1')
- freelancers.innerText= "Freelancer"
-list.append(freelancersTitle);
-
-const listTables = document.createElement("table");
-const thead = document.createElement("thead")
-const tbody = document.createdElement("tbody")
- 
-for(let key of Objects.keys(freelancers[0])){
-    const th = document.createAttribute.Elements('th');
-    const header= document.createTextNode(key);
-
-    the.append(th).appendChild(header);
-}
- //add table to
-freelancerTable.appendChild(thead);
-freelancerTable.appendChild(tbody);
- list.appendChild(freelancerTable);
+  const newjobs = [
+    { name: "Robert", Occupation: "Programmer", age: "28" },
+    { name: "Luis", Occupation: "Driver", age: "31" },
+    { name: "Marta", Occupation: "Programmer", age: "28" },
+  ];
+  
+  function init() {
+    
+    const freelancers = document.querySelector("#freelacers");
+   
+    const freelancersTitle = document.createElement("h1");
+    freelancersTitle.innerText = "Freelancers";
+    freelancers.append(freelancersTitle);
+  
+    const FreelancersTable = document.createElement("table");
+    const thead = document.createElement("thead");
+    const tbody = document.createElement("tbody");
+  
+    for (let key of Object.keys(freelancers[0])) {
+   
+      const th = document.createElement("th");
+      th.innerText = key;
+   
+      thead.appendChild(th);
+    }
+  
+  
+    freelancersTable.appendChild(thead);
+   
+    freelancersTable.appendChild(tbody);
+  
+    freelancers.appendChild(freelancersTable);
+  
+   
+    renderFreelancers();
   }
   
+ 
+  function renderFreelancers() {
+    
+    const freelancersTable = document.querySelector("tbody");
+
+    const freelancersElements = freelancers.map((freelancers) => {
+    
+      const row = document.createElement("tr");
+  
+      const f_name = document.createElement("td");
+      f_name.innerText = freelancers.name;
+  
+      const f_type = document.createElement("td");
+      f_type.innerText = freelancers.type;
+  
+      const f_age = document.createElement("td");
+      f_age.innerText = freelancers.age;
+  
+    
+      row.appendChild(f_name);
+      row.appendChild(f_type);
+      row.appendChild(f_age);
+  
+      return row;
+    });
+  
+   
+    freelancersTable.replaceChildren(...freelancersElements);
+  }
+  
+ 
+  function newjobs() {
+    
+    if (newjobs.length > 0) {
+    
+      const newPet = newjobs.pop();
+  
+      
+      pets.push(newjobs);
+  
+      
+      renderjobs();
+    }
+  
+  
+  }
+  
+ 
+  setInterval(addFreelancers, 1000);
+  
+
+  init();

@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
-</head>
-<body align="center">
-<div id="list">
-    <h1>Freelancer</h1>
-    <table>
-        <thead></thead>
-    </table>
-</div>
-
-    
+    <script src="index.js" defer></script>
+    <style>
+        body{
+            text-align: center;
+            background-color:rgb(255, 229, 229);
+            color:black
+        }
+        #freelancers{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+        table{
+            margin: 0 30%;
+        }
+    </style>
+</head>   
+<body>
+    <div id="freelancers"></div>
 </body>
 </html>
+   
