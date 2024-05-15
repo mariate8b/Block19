@@ -13,11 +13,11 @@ const freelancers = [
   
   function init() {
     
-    const freelancers = document.querySelector("#freelacers");
+    const freediv = document.querySelector("#freediv");
    
     const freelancersTitle = document.createElement("h1");
     freelancersTitle.innerText = "Freelancers";
-    freelancers.append(freelancersTitle);
+    freediv.append(freelancersTitle);
   
     const FreelancersTable = document.createElement("table");
     const thead = document.createElement("thead");
@@ -36,7 +36,7 @@ const freelancers = [
    
     freelancersTable.appendChild(tbody);
   
-    freelancers.appendChild(freelancersTable);
+    freediv.appendChild(freelancersTable);
   
    
     renderFreelancers();
