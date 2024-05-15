@@ -77,7 +77,7 @@ const freelancers = [
     
     if (newjobs.length > 0) {
     
-      const newPet = newjobs.pop();
+      const newjobs = newjobs.pop();
   
       
       pets.push(newjobs);
